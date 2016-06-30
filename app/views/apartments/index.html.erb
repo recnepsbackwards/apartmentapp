@@ -1,12 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Apartments</h1>
-
+<h3>Search Apartments</h3>
+<form action="/search/search" method="get">
+  <p><input type="text" name="query" placeholder="Search apartments"/></p>
+</form>
 <table>
   <thead>
     <tr>
-      <th>Latitude</th>
-      <th>Longitude</th>
+      <th>User</th>
       <th>Address</th>
       <th>Name</th>
       <th>Contact</th>
@@ -15,6 +17,9 @@
       <th>Price</th>
       <th>Description</th>
       <th>Image</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,8 +27,7 @@
   <tbody>
     <% @apartments.each do |apartment| %>
       <tr>
-        <td><%= apartment.latitude %></td>
-        <td><%= apartment.longitude %></td>
+        <td><%= image_tag @user.find(apartment.user_id).avatar.url(:thumb) %></td>
         <td><%= apartment.address %></td>
         <td><%= apartment.name %></td>
         <td><%= apartment.contact %></td>

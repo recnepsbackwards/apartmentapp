@@ -1,4 +1,9 @@
 == README
 
-#Apartment App
-Using google maps API
+Apartment App made with Rails (Week 9 at LEARN)
+
+Stories:
+- Make apartment finder app
+- Integrate Google Maps API for location
+- Integrate Paperclip for image uploads
+- Integrate Textacular for search
